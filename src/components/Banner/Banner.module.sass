@@ -1,0 +1,85 @@
+$total: 400
+$orb-size: 275px
+$particle-size: 5px
+$time: 13s
+$base-hue: 120
+
+.wrap
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 0
+  height: 0
+  transform-style: preserve-3d
+  perspective: 1000px
+  animation: rotate $time infinite linear
+  z-index: 1
+
+@keyframes rotate
+  100%
+    transform: rotateY(360deg) rotateX(360deg)
+
+.c
+  position: absolute
+  width: $particle-size
+  height: $particle-size
+  border-radius: 50%
+  opacity: 0
+
+@for $i from 1 through $total
+  $z: (random(360) * 1deg)
+  $y: (random(360) * 1deg)
+  $hue: ((60 / $total * $i) + $base-hue) // range from 120 to 180
+
+  .c:nth-child(#{$i})
+    animation: orbit#{$i} $time infinite
+    animation-delay: ($i * 0.01s)
+    background-color: hsla($hue, 100%, 50%, 1)
+
+  @keyframes orbit#{$i}
+    20%
+      opacity: 1
+    30%
+      transform: rotateZ(-$z) rotateY($y) translateX($orb-size) rotateZ($z)
+    80%
+      transform: rotateZ(-$z) rotateY($y) translateX($orb-size) rotateZ($z)
+      opacity: 1
+    100%
+      transform: rotateZ(-$z) rotateY($y) translateX(($orb-size * 3)) rotateZ($z)
+
+
+    
+.general_banner
+    position: relative
+    overflow: hidden
+    padding: 0 62px
+    height: 754px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    border-radius: 0px 0px 40px 40px
+    background: radial-gradient(162.51% 100% at 50% 0%, #1B1B1B 46.35%, #136420 75%, #3BFF5B 99.99%, #3BFF5B 100%, #388E46 100%), #1B1B1B
+
+    .banner_title
+        color: var(--Primary-light, #E7E7E7)
+        font-family: Tektur
+        font-size: 142px
+        font-style: normal
+        font-weight: 500
+        line-height: 120%
+        letter-spacing: 7.1px
+        text-transform: uppercase
+        margin: 0
+        z-index: 2
+
+    .subtitle_banner_link
+        color: var(--Primary-light, #E7E7E7)
+        font-family: Onest
+        font-size: 24px
+        font-style: normal
+        font-weight: 500
+        line-height: 120%
+        text-transform: lowercase
+        z-index: 2
+
