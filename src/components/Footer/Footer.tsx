@@ -1,6 +1,6 @@
 import styles from "./Footer.module.sass";
 
-export default function Footer() {
+export default function Footer(): JSX.Element {
   return (
     <footer className={styles.footer}>
       <nav className={`${styles.nav_footer} container`}>

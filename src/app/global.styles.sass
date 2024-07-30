@@ -1,37 +1,55 @@
 html
     scroll-behavior: smooth
+    height: 100%
 
     body
         background: var(--Primary-black, #161616)
+        margin: 0
+        height: 100%
+        overflow-x: hidden
 
         *
             color: #fff
             box-sizing: border-box
             transition-duration: 0.5s
 
-        section
-            margin-bottom: 128px
+        .wrapper
+            min-height: 100%
+            display: flex
+            flex-direction: column
 
-        figure
-            margin: 0
+            main
+                flex: 1 1 auto
 
-        a
-            text-decoration: none
+                section
+                    margin-bottom: 128px
 
-            &:hover
-                color: #3bff5b
+                figure
+                    margin: 0
 
-                *
-                    color: #3bff5b
-                    fill: #3bff5b
+                a
+                    text-decoration: none
 
+                    &:hover
+                        color: #3bff5b
 
-        .container
-            position: relative
-            max-width: 1400px
-            margin: 0 auto
+                        *
+                            color: #3bff5b
+                            fill: #3bff5b
 
-        .reset_ul
-            padding: 0
-            list-style-type: none
-            margin: 0
+.container
+    position: relative
+    max-width: 1400px
+    margin: 0 auto
+.reset_ul
+    padding: 0
+    list-style-type: none
+    margin: 0
+
+.test-title
+    position: absolute
+    top: 25%
+    left: 50%
+    transform: translate(-50%, -50%)
+    font-size: 25vh
+    font-weight: 700

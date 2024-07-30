@@ -1,7 +1,5 @@
-export default function Cases() {
+export default function Cases(): JSX.Element {
     return (
-        <main>
-            <h1>Cases</h1>
-        </main>
+            <h1 className="test-title">Cases</h1>
     )
 }

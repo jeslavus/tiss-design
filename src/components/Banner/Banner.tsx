@@ -1,17 +1,11 @@
+import Fireworks from "../Fireworks/Fireworks";
 import styles from "./Banner.module.sass";
 
-export default function Banner() {
+export default function Banner():JSX.Element {
   return (
     <section id="banner">
       <div className={`${styles.general_banner} container`}>
-        {/* <div className={styles.fireworks_wrap}>
-          
-        </div> */}
-        <div className={styles.wrap}>
-            {Array.from({ length: 400 }, (_, i) => (
-              <div key={i} className={styles.c}></div>
-            ))}
-          </div>
+        <Fireworks />
         <h1 className={styles.banner_title}>
           UI/UX & digital
           <br />

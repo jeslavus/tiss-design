@@ -41,7 +41,7 @@ const works: Work[] = [
   },
 ];
 
-export default function BestWorks() {
+export default function BestWorks(): JSX.Element {
   return (
     <section id="best_works">
       <div className="container">

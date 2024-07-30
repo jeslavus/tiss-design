@@ -1,7 +1,5 @@
-export default function About() {
+export default function About(): JSX.Element {
     return (
-        <main>
-            <h1>About</h1>
-        </main>
+            <h1 className="test-title">About</h1>
     )
 }

@@ -1,14 +1,31 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./Header.module.sass";
 
-export default function Header() {
-  const pathname:string = usePathname();
+export default function Header(): JSX.Element {
+  const pathname: string = usePathname();
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isScrolled ? styles.header_scroll : ""}`}>
       <nav className={`${styles.header_nav_menu} container`}>
         {pathname === "/" ? (
           <p>Tiss Ekaterina</p>

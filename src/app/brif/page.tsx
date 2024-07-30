@@ -1,7 +1,5 @@
-export default function Brif() {
+export default function Brif(): JSX.Element {
     return (
-        <main>
-            <h1>Brif</h1>
-        </main>
+            <h1 className="test-title">Brif</h1>
     )
 }

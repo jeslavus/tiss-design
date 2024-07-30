@@ -1,5 +1,5 @@
-export default function Policy () {
+export default function Policy(): JSX.Element {
     return (
-        <h1>Policy</h1>
+        <h1 className="test-title">Policy</h1>
     )
 }

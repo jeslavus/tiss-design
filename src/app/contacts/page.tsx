@@ -1,5 +1,5 @@
-export default function Contacts () {
+export default function Contacts(): JSX.Element {
     return (
-        <h1>Контакты</h1>
+        <h1 className="test-title">Контакты</h1>
     )
 }
