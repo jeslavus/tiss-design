@@ -1,47 +1,20 @@
 import Image from "next/image";
 import styles from './BestWorks.module.sass';
+import Works from '@/json/cases.json';
+import Link from "next/link";
 
 interface Work {
   src: string;
   title: string;
   description: string;
   year: number;
+  slug: string,
+  parent: string
 }
 
-const works: Work[] = [
-  {
-    src: "/best-works-img/bank.png",
-    title: "Банк Фирм",
-    description: "UI/UX design, Branding, Guideline",
-    year: 2021,
-  },
-  {
-    src: "/best-works-img/qtec.png",
-    title: "Qtec",
-    description: "UI/UX design",
-    year: 2022,
-  },
-  {
-    src: "/best-works-img/natt.png",
-    title: "Цифровая платформа НАТТ",
-    description: "UI/UX design",
-    year: 2020,
-  },
-  {
-    src: "/best-works-img/rusnatt.png",
-    title: "RusНАТТ",
-    description: "UI/UX design",
-    year: 2021,
-  },
-  {
-    src: "/best-works-img/svs.png",
-    title: "SVSmotors",
-    description: "Landing",
-    year: 2023,
-  },
-];
-
 export default function BestWorks(): JSX.Element {
+  const works: Work[] = Works;
+
   return (
     <section id="best_works">
       <div className="container">
@@ -60,6 +33,7 @@ export default function BestWorks(): JSX.Element {
                   <h3 className={styles.best_work_name}>{work.title} /</h3>
                   <p className={styles.best_work_descr}>{work.description}</p>
                   <p className={styles.best_work_year}>{work.year}</p>
+                  <Link href={`${work.parent}/${work.slug}/`}>Подробнее</Link>
                 </figcaption>
               </figure>
             </li>

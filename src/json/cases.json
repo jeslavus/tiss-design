@@ -1,0 +1,42 @@
+[
+    {
+      "src": "/best-works-img/bank.png",
+      "title": "Банк Фирм",
+      "description": "UI/UX design, Branding, Guideline",
+      "year": 2021,
+      "slug": "bank-firm",
+      "parent": "/cases/"
+    },
+    {
+      "src": "/best-works-img/qtec.png",
+      "title": "Qtec",
+      "description": "UI/UX design",
+      "year": 2022,
+      "slug": "qtec",
+      "parent": "/cases/"
+    },
+    {
+      "src": "/best-works-img/natt.png",
+      "title": "Цифровая платформа НАТТ",
+      "description": "UI/UX design",
+      "year": 2020,
+      "slug": "natt",
+      "parent": "/cases/"
+    },
+    {
+      "src": "/best-works-img/rusnatt.png",
+      "title": "RusНАТТ",
+      "description": "UI/UX design",
+      "year": 2021,
+      "slug": "rusnatt",
+      "parent": "/cases/"
+    },
+    {
+      "src": "/best-works-img/svs.png",
+      "title": "SVSmotors",
+      "description": "Landing",
+      "year": 2023,
+      "slug": "svsmotors",
+      "parent": "/cases/"
+    }
+  ]
