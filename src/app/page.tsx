@@ -4,8 +4,8 @@ import BestWorks from "@/components/BestWorks/BestWorks";
 export default function Home(): JSX.Element {
   return (
     <>
-    <Banner />
-    <BestWorks />
+      <Banner title={"UI/UX & digital designer"} link={true} />
+      <BestWorks count={6} />
     </>
   );
 }

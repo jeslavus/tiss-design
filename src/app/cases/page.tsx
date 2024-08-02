@@ -1,9 +1,14 @@
-'use client'
+"use client";
 
+import Banner from "@/components/Banner/Banner";
+import BestWorks from "@/components/BestWorks/BestWorks";
 import Link from "next/link";
 
 export default function Cases(): JSX.Element {
   return (
-    <h1 className="test-title">Cases</h1>
+    <>
+      <Banner title={"Работы"} link={false} />
+      <BestWorks />
+    </>
   );
 }

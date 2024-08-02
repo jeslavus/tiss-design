@@ -1,5 +1,23 @@
 .best_works_list_item
     margin-bottom: 96px
+    position: relative
+
+    .best_work_link
+        display: flex
+        flex-direction: column
+        gap: 8px
+        color: #E7E7E7
+        text-align: center
+        font-family: Onest
+        font-weight: 300
+        line-height: 150%
+        position: absolute
+        right: 758px
+        top: 50%
+        transform: translate(-50%, 0)
+
+        span
+            width: fit-content
 
     .best_work_figure
         display: flex
@@ -34,3 +52,20 @@
         //     width: fit-content
         //     height: fit-content
         //     max-height: 500px
+
+.all_cases
+    border-radius: 100px
+    border: 1px solid #E7E7E7
+    padding: 16px 64px
+    color: #E7E7E7
+    font-family: Onest
+    font-size: 28px
+    font-weight: 500
+    line-height: 150%
+    margin: 0 auto
+    display: block
+    width: fit-content
+
+    &:hover
+        background: #E7E7E7
+        color: #161616
